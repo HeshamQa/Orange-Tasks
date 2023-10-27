@@ -7,16 +7,18 @@ void main() {
   String? middleName = stdin.readLineSync();
   print("Enter your last name : ");
   String? lastName = stdin.readLineSync();
-  final fullName = FullName(firstName!)(middleName!)(lastName!);
+  final fullName = CarryingName(firstName!)(middleName!)(lastName!);
   print(fullName);
 }
 
-Function FullName(
-  String fName,
-) {
+Function CarryingName(String fName) {
   return (String mName) {
     return (String lName) {
-      return "$fName $mName $lName";
+      return FullName(fName, mName, lName);
     };
   };
+}
+
+String FullName(String fname, String mname, String lname) {
+  return "$fname $mname $lname";
 }
