@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-  print("Enter a num to check if Even or Odd : ");
+  print("Enter a num to check if Even or Odd :");
 
   try {
     int n = int.parse(stdin.readLineSync()!);
